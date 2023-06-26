@@ -11,19 +11,21 @@ const BlogPage = ({ data }) => (
   <Layout>
     <Seo title="Blog" />
     <div className={styles.textCenter}>
-      <h1>Blog Page</h1>
+      <h1 className="text-3xl font-bold">Blog Page</h1>
+      <div className="grid grid-cols-4 gap-4">
       {data.allPrismicPost.edges.map(post => {
         return (
-          <div key={post.node.uid}>
+          <div key={post.node.uid} className='rounded-md border-double border-gray-400 border-4'>
             <h3>{post.node.data.title.text}</h3>
             <br />
             <Link to={`${post.node.uid}`}>Открыть</Link>
             <br />
             <br />
-            <hr />
+            <br />
           </div>
         )
       })}
+      </div>
     </div>
   </Layout>
 )

@@ -2,30 +2,21 @@ import { Link } from "gatsby";
 import React from "react";
 
 const Menu = () => {
-    return <div
-    style={{
-        background: "#f4f4f4",
-        paddingTop: "10px",
-    }}
-    >
+    return  <nav className="w-full flex md:justify-center justify-between items-center p-4 bg-[#f4f4f4]">
         <ul
-        style={{
-            listStyle: 'none',
-            display: 'flex',
-            justifyContent: 'space-evenly'
-        }}
+         className="md:flex hidden font-bold list-none flex-row justify-between items-center flex-initial m-0"
         >
-            <li>
+            <li className='mx-4'>
                 <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className='mx-4 cursor-pointer'>
                 <Link to="/about">About</Link>
             </li>
-            <li>
+            <li className='mx-4 cursor-pointer'>
                 <Link to="/blog">Blog</Link>
             </li>
         </ul>
-    </div>
+    </nav>
 }
 
 export default Menu
