@@ -20,7 +20,7 @@ const BlogPage = ({ data }) => (
             <Link to={`${post.node.uid}`}>Открыть</Link>
             <br />
             <br />
-            <br />
+            <hr />
           </div>
         )
       })}
