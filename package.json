@@ -6,15 +6,19 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^5.11.0",
+    "gatsby-plugin-gatsby-cloud": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-prismic-previews": "^5.3.1",
     "gatsby-plugin-sharp": "^5.11.0",
     "gatsby-source-filesystem": "^5.11.0",
+    "gatsby-source-prismic": "^5.3.1",
     "gatsby-transformer-sharp": "^5.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "dotenv": "^16.3.1",
     "prettier": "^2.8.8"
   },
   "keywords": [

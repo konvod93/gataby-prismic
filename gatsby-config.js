@@ -7,10 +7,15 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Gatsby Prismic`,
+    description: `Our First Blog Project`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
@@ -39,5 +44,21 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-  ],
+    `gatsby-plugin-gatsby-cloud`,    
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `gatsby-prismcms`,
+        accessToken: `${process.env.API_KEY}`,
+        linkResolver:
+          ({ node, key, value }) =>
+          post =>
+            `/${post.uid}`,
+        schemas: {
+          post: require("./custom_types/post.json"),
+          blog_post: {},
+        },
+      },
+    },
+    ],
 }
