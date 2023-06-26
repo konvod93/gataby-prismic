@@ -12,7 +12,7 @@ const BlogPage = ({ data }) => (
     <Seo title="Blog" />
     <div className={styles.textCenter}>
       <h1 className="text-3xl font-bold">Blog Page</h1>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-10">
       {data.allPrismicPost.edges.map(post => {
         return (
           <div key={post.node.uid} className='rounded-md border-double border-gray-400 border-4'>

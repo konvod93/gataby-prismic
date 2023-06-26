@@ -6,13 +6,13 @@ const Menu = () => {
         <ul
          className="md:flex hidden font-bold list-none flex-row justify-between items-center flex-initial m-0"
         >
-            <li className='mx-4'>
+            <li className='mx-20'>
                 <Link to="/">Home</Link>
             </li>
-            <li className='mx-4 cursor-pointer'>
+            <li className='mx-20'>
                 <Link to="/about">About</Link>
             </li>
-            <li className='mx-4 cursor-pointer'>
+            <li className='mx-20'>
                 <Link to="/blog">Blog</Link>
             </li>
         </ul>
