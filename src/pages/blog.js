@@ -16,9 +16,10 @@ const BlogPage = ({ data }) => (
       {data.allPrismicPost.edges.map(post => {
         return (
           <div key={post.node.uid} className='rounded-md border-double border-gray-400 border-4'>
-            <h3>{post.node.data.title.text}</h3>
+            <h3 className='font-bold text-xl'>{post.node.data.title.text}</h3>
             <br />
-            <Link to={`${post.node.uid}`}>Открыть</Link>
+            <Link to={`${post.node.uid}`} className='font-bold'>Открыть</Link>
+            <p>Дата создания {post.node.data.date}</p>
             <br />
             <br />
             <br />
@@ -44,7 +45,8 @@ const BlogPage = ({ data }) => (
           data {
             title {
               text
-            }            
+            } 
+            date(formatString: "")           
           }
         }
       }
