@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
       background: `#232`,
     }}
   >
-    <h1 style={{ margin: 0 }}>
+    <h1 className='text-3xl font-bold m-0' style={{ margin: 0 }}>
         <Link
           to="/"
           style={{

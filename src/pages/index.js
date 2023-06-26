@@ -10,7 +10,7 @@ import * as styles from "../components/index.module.css"
 const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>      
-      <h1>
+      <h1 className='text-3xl font-bold underline'>
         My Blog
       </h1> 
       <p>It is My Blog</p>     
